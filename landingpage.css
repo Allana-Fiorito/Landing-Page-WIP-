@@ -1,11 +1,12 @@
 /*
 
 Ainda para fazer:
-- Ajustar os títulos dos trechos do códido colocados como comentários;
+- RESPONSIVO!
 - Fazer as máscaras funcionarem;
 - Fazer o envio de informações do formulário funcionar;
-- Deixar o .slctUf (a opção de selecionar o estado no formulário) alinhado à direita;
-- RESPONSIVO!
+- Deixar o .slctUf (a opção de selecionar o estado no formulário) alinhado à esquerda;
+- Ajustar os títulos dos trechos do códido colocados como comentários;
+- Deixar o formulário centralizado no seu div;
 
 */
 
@@ -35,14 +36,18 @@ Ainda para fazer:
     --amarelo:       #ffe081;
     --amareloEscuro: #bd8e32;
     --branco:        white;
-    --preto:         black;
+    --preto:         #000000;
     --sombraCinza:   #000000d2;
     --dourado: linear-gradient(
                      #f4e390 5%,
-                     white 10%,
+                     #ffffff 10%,
                      #e6b451 25%,
                      #613914 87%,
                      #bd8e32);
+    --vermelhoTeste: #ff0000;
+    --azulTeste:     #00ced1;
+    --verdeTeste:    #006400;
+    --laranjaTeste:  #ff8c00;
 }
 
 /*------- 🔶 Todos os elementos que possuírem as mesmas configurações: 🔶 -------*/
@@ -50,7 +55,7 @@ Ainda para fazer:
 /*------------------------------- display: flex; ---------------------------------*/
 /*-------------------------- justify-content: center; ----------------------------*/
 
-header, .section1, .sct1Div1, .section2, .sct2Div1, fieldset, .section3, .sct3Div2, .section4, footer{
+header, .section1, .sct1Div1, .section2, .sct2Div1, .sct2Div2, fieldset, .section3, .sct3Div2, .section4, footer{
     display: flex;
     justify-content: center;
 }
@@ -89,14 +94,14 @@ body{
 
 header{
     width: 100%;
-    height: 30vh;
+    height: auto;
     background-color: var(--laranja);
 }
 
 /*----------------------- Ilustração do cabeçalho/header: ------------------------*/
 
 .IMGInfoBasica{
-    height: 100%;
+    height: 20vh;
 }
 
 /*------------------------ 🔶 Configurações do main: 🔶 -------------------------*/
@@ -109,6 +114,7 @@ main{
 
 .section1{
     width: 100%;
+    height: auto;
     background-image: linear-gradient(to left, var(--verdeClaro1), var(--branco), var(--verdeClaro1));
 }
 
@@ -122,8 +128,7 @@ main{
 /*----------------------- Ilustração do div 1 do 1º section ----------------------*/
 
 .IMGPC10{
-    height: 50vh;
-    align-self: center;
+    height: 35vh;
 }
 
 /*--------------------- Configurações do div 2 do 1º section ---------------------*/
@@ -132,6 +137,8 @@ main{
     text-align: center;
     width: 50%;
     height: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 /*--------------------------- Texto: "SAIBA TUDO SOBRE" --------------------------*/
@@ -181,7 +188,7 @@ main{
 
 .sct2Div1{
     width: 50%;
-    /* background-color: #061170; */
+    height: 100%;
 }
 
 /*---------------- Configurações dos textos do div 1 do 2º section ---------------*/
@@ -191,7 +198,7 @@ main{
 .txt1Sct2Div1{
     color: var(--branco);
     font-size: 25px;
-    margin: 40px 40px 20px 40px;
+    margin: 40px 0 20px 0;
     text-shadow: 0 3px 10px var(--sombraCinza);
 }
 
@@ -200,23 +207,20 @@ main{
 .txt2Sct2Div1{
     color: var(--verdeClaro1);
     font-size: 17px;
-    margin: 0 40px 0 40px;
+    margin-bottom: 40px;
 }
 
 /*-------------------- Configurações da imagem no div 1 do 2º section --------------------*/
 
 .LealLogo{
     width: 250px;
-    margin: 30px;
 }
 
 /*--------------------- Configurações da lista no div 1 do 2º section --------------------*/
 
-ul{
-    position: relative;
+.sct2Div1 ul{
     list-style: none;
-    margin-bottom: 30px;
-    margin-top: 20px;
+    margin: 40px 0 40px -10%;
     color: var(--branco);
     font-size: 17px;
 }
@@ -228,17 +232,19 @@ li::before{
 
 .sct2Div2{
     width: 50%;
+    height: 100%;
 }
 
 /*-------------------- Configurações do formulário no div 2 do section -------------------*/
 
 fieldset{
-    width: 80%;
+    width: 60%;
     border-style: solid;
     border-radius: 20px;
     border-width: 5px;
     border-color: var(--verdeClaro1);
     box-shadow: 0 10px 50px 0 var(--amareloEscuro);
+    margin-left: 10%;
 }
 legend{
     margin-bottom: 20px;
@@ -249,10 +255,10 @@ legend{
 label{
     margin: 20px;
     color: var(--verdeClaro1);
+    font-size: 15px;
 }
 input, select{
-    margin-bottom: 20px;
-    margin-left: 20px;
+    margin: 0 0 20px 20px;
     border-radius: 10px;
     color: var(--verdeEscuro);
     font-weight: 600;
@@ -288,8 +294,14 @@ input, select, .btnEnviar{
 .sct3Div1 p{
     color: var(--cinzaEscuro);
     font-size: 25px;
-    margin: 40px;
+    margin: 60px 0 40px 0;
     text-shadow: 0 3px 10px var(--verdeEscuroTr);
+}
+
+.sct3Div1 ul{
+    list-style: none;
+    margin: 40px 0 40px 0;
+    font-size: 17px;
 }
 
 .sct3Div1 li{
@@ -306,7 +318,7 @@ input, select, .btnEnviar{
 /*----------------------------- Imagem do div 2 do 3º section ----------------------------*/
 
 .IMGXLS{
-    height: 50vh;
+    width: 450px;
 }
 
 /*------------------------- 🔶 Configurações do 4º section: 🔶 --------------------------*/
@@ -390,15 +402,325 @@ footer img{
     margin-bottom: 30px;
 }
 
-/*--------------------------------- 🔶 RESPONSIVIDADE 🔶 --------------------------------*/
 
-/*----------------------------------------- Tablet ---------------------------------------*/
+/*========================================================================================*/
+/*=================================# 🔷 RESPONSIVO 🔷 #==================================*/
+/*========================================================================================*/
 
-@media(min-width: 679px) and (max-width: 1023px)
-{
+
+/*TABLET*/
+
+@media(min-width: 679px) and (max-width: 1023px){
+
+    /*margin-left: 10%;*/
+
+    .sct1Div1, .sct2Div1, .sct3Div1{
+        margin-left: 10%;
+    }
+
+    /*margin-right: 10%;*/
+
+    .sct1Div2, .sct2Div2, .sct3Div2{
+        margin-right: 10%;    
+    }
+
+    /*🔷 Configurações do cabeçalho/header: 🔷*/
+
+    header{
+        background-color: var(--azul);
+    }
+
+    /*Ilustração do cabeçalho/header:*/
+
+    .IMGInfoBasica{
+        height: 15vh;
+    }
+
+    /*Ilustração do div 1 do 1º section*/
+
+    .IMGPC10{
+        height: 30vh;
+    }
+
+    /*Configurações do div 2 do 1º section*/
+
+    .sct1Div2{
+        height: 100%;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    /*Texto: "SAIBA TUDO SOBRE"*/
+
+    .txt1Sct1Div2{
+        font-size: 30px;
+    }
+
+    /*Texto: "Planilhas"*/
+
+    .txt2Sct1Div2{
+        font-size: 30px;
+    }
+
+    /*Botão para o e-book gratuito*/
+
+    .btnEbookGratuito{ 
+        margin: 20px 0 20px 0;
+    }
+
+    /*Configurações do texto do botão para o e-book*/
+
+    .txtBtnEbookGratuito{
+        margin: 15px;
+        font-size: 20px;
+        text-shadow: 0 3px 5px var(--verdeEscuro);
+    }
+
+    /*🔷 Configurações do 2º section: 🔷*/
+
+    /*Configurações dos textos do div 1 do 2º section*/
+
+    /*Texto: "Aprenda a usar [...]"*/
+
+    .txt1Sct2Div1{
+        font-size: 22px;
+        margin: 30px 0 15px 0;
+        text-shadow: 0 4px 7px var(--sombraCinza);
+    }
+
+    /*Texto: "Um material eduvativo, [...]"*/
+
+    .txt2Sct2Div1{
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    /*Configurações da imagem no div 1 do 2º section*/
+
+    .LealLogo{
+        width: 230px;
+    }
+
+/*--------------------- Configurações da lista no div 1 do 2º section --------------------*/
+
+.sct2Div1 ul{
+    list-style: none;
+    margin: 40px 0 40px -10%;
+    color: var(--branco);
+    font-size: 17px;
+}
+li::before{
+    content: "✅";
+}
+
+/*------------------------- Configurações do div 2 do 2º section -------------------------*/
+
+.sct2Div2{
+    width: 50%;
+    height: 100%;
+}
+
+/*-------------------- Configurações do formulário no div 2 do section -------------------*/
+
+fieldset{
+    width: 60%;
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 5px;
+    border-color: var(--verdeClaro1);
+    box-shadow: 0 10px 50px 0 var(--amareloEscuro);
+    margin-left: 10%;
+}
+legend{
+    margin-bottom: 20px;
+    color: var(--branco);
+    font-size: 20px;
+    text-shadow: 0 3px 10px var(--sombraCinza);
+}
+label{
+    margin: 20px;
+    color: var(--verdeClaro1);
+    font-size: 15px;
+}
+input, select{
+    margin: 0 0 20px 20px;
+    border-radius: 10px;
+    color: var(--verdeEscuro);
+    font-weight: 600;
+}
+input, select, .btnEnviar{
+    border-style: none;
+}
+.btnEnviar{
+    width: 200px;
+    height: 70px;
+    font-size: 17px;
+    border-radius: 10px;
+    background-image: var(--dourado);
+    text-shadow: 0 1px 2px var(--amarelo), 0 1px 2px var(--amarelo);
+    box-shadow: 0 5px 20px var(--sombraCinza);
+    margin-bottom: 10px;
+}
+
+/*------------------------- 🔷 Configurações do 3º section: 🔷 --------------------------*/
+
+.section3{
+    width: 100%;
+    height: auto;
+    background-image: linear-gradient(to right, var(--verdeClaro1), var(--branco) 30%, var(--verdeClaro2) 70%);
+}
+
+/*------------------------- Configurações do div 1 do 3º section -------------------------*/
+
+.sct3Div1{
+    width: 50%;
+}
+
+.sct3Div1 p{
+    color: var(--cinzaEscuro);
+    font-size: 25px;
+    margin: 60px 0 40px 0;
+    text-shadow: 0 3px 10px var(--verdeEscuroTr);
+}
+
+.sct3Div1 ul{
+    list-style: none;
+    margin: 40px 0 40px 0;
+    font-size: 17px;
+}
+
+.sct3Div1 li{
+    color: var(--verdeEscuro);
+    font-size: 17px;
+}
+
+/*------------------------- Configurações do div 2 do 3º section -------------------------*/
+
+.sct3Div2{
+    width: 50%;
+}
+
+/*----------------------------- Imagem do div 2 do 3º section ----------------------------*/
+
+.IMGXLS{
+    width: 450px;
+}
+
+/*------------------------- 🔷 Configurações do 4º section: 🔷 --------------------------*/
+
+.section4{
+    background-image: linear-gradient(to right, var(--verdeClaro1), var(--branco) 30%, var(--verdeClaro2) 70%);
+}
+
+/*------------------- Configurações do botão no 4º section para o e-book -----------------*/
+
+.section4 button{
+    border-style: none;
+    border-radius: 10px;
+    background-color: var(--verde);
+    width: 250px;
+    height: 70px;
+    box-shadow: 0 10px 30px 0 var(--verdeEscuroTr);
+    color: var(--branco);
+    margin: 35px;
+    margin-top: 10px;
+    font-size: 22px;
+    text-shadow: 0 3px 5px var(--verdeEscuro);
+}
+
+/*------------------------------- Texto: "Entenda as funções" ----------------------------*/
+
+.section4 p{
+    font-size: 40px;
+    color: var(--verdeEscuro);
+}
+
+.section4 div{
+    border-radius: 30px;
+    background-color: var(--cinzaEscuro);
+    width: auto;
+    height: auto;
+    box-shadow: 0 10px 30px 5px var(--verdeEscuroTr);
+    margin: 40px;
+    margin-bottom: 60px;
+}
+
+/* Texto: "PROCV / SE - ÍNDICE / CORRESP"*/
+
+    .section4 div p{
+        font-size: 50px;
+        margin: 40px 55px 40px 55px;
+        text-align: center;
+        color: var(--branco);
+        text-shadow:
+            0 0 5px var(--branco),
+            0 0 10px var(--amarelo),
+            0 0 20px var(--amarelo),
+            0 0 30px var(--amareloEscuro),
+            0 0 40px var(--amareloEscuro);
+    }
+
+
+/*🔷 Configurações do footer/rodapé:🔷*/
+
+    footer{
+        width: 100%;
+        height: auto;
+        background-color: var(--azul);
+        color: var(--branco);
+    }
+}
+
+/* Imagem do footer/rodapé*/
+
+footer img{
+    width: 70vh;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/*CELULAR*/
+
+/* @media(max-width: 678px){
+    .sct1Div1, .sct2Div1, .sct3Div1{
+        margin-left: 5%;
+    }
+
+    .sct1Div2, .sct2Div2, .sct3Div2{
+        margin-right: 5%;    
+    }
+
+    .section1, .section2, .section3{
+        flex-direction: column;
+    }
+
+    header{
+        background-color: var(--verde);
+    }
+
+    .IMGInfoBasica{
+        height: 15vh;
+    }
+
+    .IMGPC10{
+        height: 15vh;
+        align-self: center;
+    }
+
+    .txt1Sct2Div1{
+        color: var(--branco);
+        font-size: 15px;
+        margin: 30px 40px 15px 0;
+        text-shadow: 0 3px 10px var(--sombraCinza);
+    }
+
+    .txt2Sct2Div1{
+        color: var(--verdeClaro1);
+        font-size: 13px;
+        margin: 0 40px 0 0;
+    }
     
-}
-
-/*---------------------------------------- Celular ---------------------------------------*/
-@media(max-width: 678px){
-}
+    footer{
+        background-color: var(--verde);
+    }
+} */
