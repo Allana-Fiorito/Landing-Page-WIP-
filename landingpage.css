@@ -55,7 +55,7 @@ Ainda para fazer:
 /*------------------------------- display: flex; ---------------------------------*/
 /*-------------------------- justify-content: center; ----------------------------*/
 
-header, .section1, .sct1Div1, .section2, .sct2Div1, .sct2Div2, fieldset, .section3, .sct3Div2, .section4, footer{
+header, .section1, .sct1Div1, .section2, .sct2Div1, .sct2Div2, form, fieldset, .section3, .sct3Div2, .section4, footer{
     display: flex;
     justify-content: center;
 }
@@ -68,7 +68,7 @@ body, .sct1Div2, .sct2Div1, fieldset, .section4, footer{
 
 /*----------------------------- align-items: center; -----------------------------*/
 
-.section1, .section2, .sct2Div1, fieldset, .sct3Div2, .section4, footer{
+.section1, .section2, .sct2Div1, form, fieldset, .sct3Div2, .section4, footer{
     align-items: center;
 }
 
@@ -221,8 +221,8 @@ main{
 .sct2Div1 ul{
     list-style: none;
     margin: 40px 0 40px -10%;
-    color: var(--branco);
     font-size: 17px;
+    color: var(--branco);
 }
 li::before{
     content: "✅";
@@ -244,7 +244,6 @@ fieldset{
     border-width: 5px;
     border-color: var(--verdeClaro1);
     box-shadow: 0 10px 50px 0 var(--amareloEscuro);
-    margin-left: 10%;
 }
 legend{
     margin-bottom: 20px;
@@ -294,19 +293,14 @@ input, select, .btnEnviar{
 .sct3Div1 p{
     color: var(--cinzaEscuro);
     font-size: 25px;
-    margin: 60px 0 40px 0;
+    margin: 50px 0 50px 0;
     text-shadow: 0 3px 10px var(--verdeEscuroTr);
 }
 
 .sct3Div1 ul{
     list-style: none;
-    margin: 40px 0 40px 0;
     font-size: 17px;
-}
-
-.sct3Div1 li{
     color: var(--verdeEscuro);
-    font-size: 17px;
 }
 
 /*------------------------- Configurações do div 2 do 3º section -------------------------*/
@@ -439,7 +433,7 @@ footer img{
     /*Ilustração do div 1 do 1º section*/
 
     .IMGPC10{
-        height: 50vh;
+        height: 40vh;
     }
 
     /*Configurações do div 2 do 1º section*/
@@ -536,122 +530,78 @@ footer img{
         font-size: 16px;
     }
 
-/*------------------------- 🔷 Configurações do 3º section: 🔷 --------------------------*/
+    /*🔷 Configurações do 3º section: 🔷*/
 
-.section3{
-    width: 100%;
-    height: auto;
-    background-image: linear-gradient(to right, var(--verdeClaro1), var(--branco) 30%, var(--verdeClaro2) 70%);
-}
+    /*Configurações do div 1 do 3º section*/
 
-/*------------------------- Configurações do div 1 do 3º section -------------------------*/
+    .sct3Div1 p{
+        font-size: 22px;
+        margin: 30px 0 30px 0;
+    }
 
-.sct3Div1{
-    width: 50%;
-}
+    .sct3Div1 ul{
+        font-size: 16px;
+    }
 
-.sct3Div1 p{
-    color: var(--cinzaEscuro);
-    font-size: 25px;
-    margin: 60px 0 40px 0;
-    text-shadow: 0 3px 10px var(--verdeEscuroTr);
-}
+    /*Imagem do div 2 do 3º section*/
 
-.sct3Div1 ul{
-    list-style: none;
-    margin: 40px 0 40px 0;
-    font-size: 17px;
-}
+    .IMGXLS{
+     width: 380px;
+    }
 
-.sct3Div1 li{
-    color: var(--verdeEscuro);
-    font-size: 17px;
-}
+    /*🔷 Configurações do 4º section: 🔷*/
 
-/*------------------------- Configurações do div 2 do 3º section -------------------------*/
+    /*Configurações do botão no 4º section para o e-book*/
 
-.sct3Div2{
-    width: 50%;
-}
+    .section4 button{
+        width: 240px;
+        height: 60px;
+        margin: 10px 0 30px 0;
+        font-size: 21px;
+    }
 
-/*----------------------------- Imagem do div 2 do 3º section ----------------------------*/
+    /*Texto: "Entenda as funções"*/
 
-.IMGXLS{
-    width: 450px;
-}
+    .section4 p{
+        font-size: 37px;
+    }
 
-/*------------------------- 🔷 Configurações do 4º section: 🔷 --------------------------*/
-
-.section4{
-    background-image: linear-gradient(to right, var(--verdeClaro1), var(--branco) 30%, var(--verdeClaro2) 70%);
-}
-
-/*------------------- Configurações do botão no 4º section para o e-book -----------------*/
-
-.section4 button{
-    border-style: none;
-    border-radius: 10px;
-    background-color: var(--verde);
-    width: 250px;
-    height: 70px;
-    box-shadow: 0 10px 30px 0 var(--verdeEscuroTr);
-    color: var(--branco);
-    margin: 35px;
-    margin-top: 10px;
-    font-size: 22px;
-    text-shadow: 0 3px 5px var(--verdeEscuro);
-}
-
-/*------------------------------- Texto: "Entenda as funções" ----------------------------*/
-
-.section4 p{
-    font-size: 40px;
-    color: var(--verdeEscuro);
-}
-
-.section4 div{
-    border-radius: 30px;
-    background-color: var(--cinzaEscuro);
-    width: auto;
-    height: auto;
-    box-shadow: 0 10px 30px 5px var(--verdeEscuroTr);
-    margin: 40px;
-    margin-bottom: 60px;
-}
+    .section4 div{
+        background-color: var(--cinzaEscuro);
+        width: auto;
+        height: auto;
+        box-shadow: 0 10px 30px 5px var(--verdeEscuroTr);
+        margin: 40px;
+        margin-bottom: 60px;
+    }
 
 /* Texto: "PROCV / SE - ÍNDICE / CORRESP"*/
 
     .section4 div p{
-        font-size: 50px;
-        margin: 40px 55px 40px 55px;
-        text-align: center;
-        color: var(--branco);
-        text-shadow:
-            0 0 5px var(--branco),
-            0 0 10px var(--amarelo),
-            0 0 20px var(--amarelo),
-            0 0 30px var(--amareloEscuro),
-            0 0 40px var(--amareloEscuro);
+        font-size: 45px;
+        margin: 35px 50px 35px 50px;
     }
 
+    /*🔷 Configurações do footer/rodapé:🔷*/
 
-/*🔷 Configurações do footer/rodapé:🔷*/
-
-    footer{
-        width: 100%;
-        height: auto;
-        background-color: var(--azul);
-        color: var(--branco);
+        footer{
+            background-color: var(--azul);
+        }
     }
-}
+   
+    /*Texto do footer/rodapé*/
 
-/* Imagem do footer/rodapé*/
+    footer p{
+        margin-top: 30px;
+        font-size: 16px;
+    }
 
-footer img{
-    width: 70vh;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
+    /* Imagem do footer/rodapé*/
+
+    footer img{
+        width: 60vh;
+        margin: 20px 0 20 0;
+    }
 
 /*CELULAR*/
 

@@ -6,6 +6,7 @@
     <title>Atividade 9 - Landing Page</title>
     <link rel="stylesheet" href="landingpage.css">
 </head>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 <body>
     <header>
@@ -20,7 +21,9 @@
                 <!--As classes dentro dos h2 alteram as cores do texto, e só funcionam se a classe estiver dentro do h2, e não do p -->
                 <p class="txt1Sct1Div2"><strong>SAIBA TUDO SOBRE</strong></p>
                 <p class="txt2Sct1Div2"><strong>Planilhas</strong></p>
-                <a href="#linkParaOFormulario" title="Download do e-book"><button class="btnEbookGratuito"><p class="txtBtnEbookGratuito"><em><b>Aprenda com o e-book<br>GRATUITO</b></em></p></button></a> <!--Definir o href deste link!-->
+                <a href="#linkParaOFormulario" title="Download do e-book">
+                    <button class="btnEbookGratuito"><p class="txtBtnEbookGratuito"><em><b>Aprenda com o e-book<br>GRATUITO</b></em></p></button>
+                </a>
             </div>
         </section>
         <section class="section2">
@@ -117,10 +120,7 @@
                         $('#cpfId').mask('000.000.000-00', {reverse: true});
                     </script>
                     <script>
-                        $('#cepId').mask('00000-000');
-                    </script>
-                    <script>
-                        $('#phone_with_dddId').mask('(00) 00000-0000');
+                        $('#celularId').mask('(00) 00000-0000');
                     </script>
                 </form>
             </div>
